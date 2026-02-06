@@ -1,0 +1,358 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2867
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 <!DOCTYPE html>\
+<html lang="en">\
+<head>\
+    <meta charset="UTF-8">\
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">\
+    <title>islimitless.com | The AI Agency Shift</title>\
+    \
+    <!-- Tailwind CSS -->\
+    <script src="https://cdn.tailwindcss.com"></script>\
+    \
+    <!-- Chart.js -->\
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>\
+    \
+    <!-- FontAwesome for Icons -->\
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">\
+\
+    <!-- Fonts -->\
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=Playfair+Display:ital,wght@0,600;1,600&display=swap" rel="stylesheet">\
+\
+    <script>\
+        tailwind.config = \{\
+            theme: \{\
+                extend: \{\
+                    colors: \{\
+                        brand: \{\
+                            bg: '#FDFCFB',\
+                            dark: '#1C1917',\
+                            primary: '#D97706',\
+                            secondary: '#78716C',\
+                            accent: '#E7E5E4'\
+                        \}\
+                    \},\
+                    fontFamily: \{\
+                        sans: ['Inter', 'sans-serif'],\
+                        serif: ['Playfair Display', 'serif'],\
+                    \}\
+                \}\
+            \}\
+        \}\
+    </script>\
+\
+    <style>\
+        input[type=range] \{ -webkit-appearance: none; background: transparent; \}\
+        input[type=range]::-webkit-slider-thumb \{\
+            -webkit-appearance: none;\
+            height: 24px; width: 24px;\
+            border-radius: 50%; background: #D97706;\
+            cursor: pointer; margin-top: -10px; \
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);\
+        \}\
+        input[type=range]::-webkit-slider-runnable-track \{\
+            width: 100%; height: 4px; background: #E7E5E4; border-radius: 2px;\
+        \}\
+        .chart-container \{\
+            position: relative; width: 100%; max-width: 600px;\
+            margin-left: auto; margin-right: auto;\
+            height: 350px; max-height: 400px;\
+        \}\
+        @media (max-width: 640px) \{ .chart-container \{ height: 300px; \} \}\
+    </style>\
+\
+    <!-- Chosen Palette: Warm Stone & High-Contrast Amber -->\
+    <!-- Application Structure Plan: \
+         1. Hero: Focus on "Start for Free" and the "Simplicity" promise.\
+         2. Social/Authority Proof: Interactive charts showing the "Agency Gap".\
+         3. Feature Breakdown: "What's Inside" highlighting breakthroughs.\
+         4. Final CTA: High-urgency "Get Started for Free" without CC disclaimer.\
+         5. Updated Footer: 2026 Copyright.\
+    -->\
+    <!-- Visualization & Content Choices:\
+         - Interaction: Transformation Slider (Psychological hook).\
+         - Data: Complexity Bar Chart (Pain point validation).\
+         - Strategy: Radar Chart (The High Agency Persona).\
+         CONFIRMATION: NO SVG/MERMAID.\
+    -->\
+</head>\
+<body class="bg-brand-bg text-brand-dark font-sans antialiased">\
+\
+    <!-- Navigation -->\
+    <nav class="w-full bg-white/80 backdrop-blur-md border-b border-brand-accent py-4 sticky top-0 z-50">\
+        <div class="max-w-6xl mx-auto px-4 flex justify-between items-center">\
+            <div class="text-2xl font-serif font-bold tracking-tight">islimitless<span class="text-brand-primary">.com</span></div>\
+            <button onclick="scrollToSection('signup')" class="bg-brand-primary hover:bg-amber-700 text-white font-bold py-2.5 px-6 rounded-full transition-all shadow-md active:scale-95">\
+                Start for Free\
+            </button>\
+        </div>\
+    </nav>\
+\
+    <!-- HERO SECTION -->\
+    <section class="max-w-4xl mx-auto px-4 pt-20 pb-16 text-center">\
+        <div class="inline-flex items-center space-x-2 bg-amber-50 border border-amber-100 text-brand-primary font-bold px-4 py-1.5 rounded-full text-xs mb-8 uppercase tracking-widest">\
+            <span class="relative flex h-2 w-2">\
+              <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-primary opacity-75"></span>\
+              <span class="relative inline-flex rounded-full h-2 w-2 bg-brand-primary"></span>\
+            </span>\
+            <span>Now Open: The AI Agency Membership</span>\
+        </div>\
+        \
+        <h1 class="text-5xl md:text-7xl font-serif font-bold leading-tight mb-6">\
+            Finally, Make AI <span class="italic text-brand-primary">Simple.</span>\
+        </h1>\
+        <p class="text-xl text-gray-600 mb-10 max-w-2xl mx-auto leading-relaxed">\
+            The world's first high-agency community for corporate leaders and creators using AI to achieve personal breakthroughs without the complexity.\
+        </p>\
+\
+        <div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4 mb-16">\
+            <button onclick="scrollToSection('signup')" class="w-full sm:w-auto bg-brand-primary hover:bg-amber-700 text-white font-extrabold py-5 px-10 rounded-2xl text-xl shadow-xl transition-all hover:-translate-y-1">\
+                Get Started for Free <i class="fa-solid fa-arrow-right ml-2 text-sm"></i>\
+            </button>\
+            <button onclick="scrollToSection('how')" class="w-full sm:w-auto bg-white border border-brand-accent text-brand-secondary font-bold py-5 px-10 rounded-2xl text-xl hover:bg-gray-50 transition-all">\
+                Learn How It Works\
+            </button>\
+        </div>\
+\
+        <!-- Interactive Slider -->\
+        <div class="bg-white p-8 rounded-3xl shadow-2xl shadow-stone-200/50 max-w-2xl mx-auto border border-brand-accent">\
+            <div class="flex justify-between items-end mb-6">\
+                <div class="text-left">\
+                    <h3 class="font-bold text-lg">The Simplify Shift</h3>\
+                    <p class="text-sm text-gray-500">Slide to see the transformation</p>\
+                </div>\
+                <div id="sliderStat" class="text-brand-primary font-black text-xs uppercase bg-amber-50 px-3 py-1 rounded">Agency: Low</div>\
+            </div>\
+            <input type="range" min="0" max="100" value="0" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer mb-8" id="shiftSlider">\
+            \
+            <div class="p-6 bg-brand-bg rounded-2xl border border-brand-accent transition-all duration-500" id="sliderCard">\
+                <p id="sliderText" class="text-xl font-medium text-gray-700 leading-relaxed italic">\
+                    "I have 50 AI tabs open and I feel more behind every single day."\
+                </p>\
+            </div>\
+        </div>\
+    </section>\
+\
+    <!-- THE "HOW" SECTION -->\
+    <section id="how" class="py-24 bg-white border-y border-brand-accent">\
+        <div class="max-w-6xl mx-auto px-4">\
+            <div class="text-center mb-16">\
+                <h2 class="text-4xl font-serif font-bold mb-4">A Proven Conversion Plan</h2>\
+                <p class="text-gray-500">We bridge the gap between "Cool Tech" and "Real Agency".</p>\
+            </div>\
+\
+            <div class="grid md:grid-cols-3 gap-8">\
+                <div class="p-8 rounded-3xl bg-brand-bg border border-brand-accent hover:border-brand-primary transition-colors">\
+                    <div class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center mb-6">\
+                        <i class="fa-solid fa-wand-magic-sparkles text-brand-primary text-xl"></i>\
+                    </div>\
+                    <h3 class="text-xl font-bold mb-3 text-brand-dark">1. Simplify the Tooling</h3>\
+                    <p class="text-gray-600 text-sm leading-relaxed">\
+                        90% of AI tools are noise. We research the top 1% and give you the simple, "no-code" ways to implement them into your current workflow.\
+                    </p>\
+                </div>\
+\
+                <div class="p-8 rounded-3xl bg-brand-bg border border-brand-accent hover:border-brand-primary transition-colors">\
+                    <div class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center mb-6">\
+                        <i class="fa-solid fa-users-rays text-brand-primary text-xl"></i>\
+                    </div>\
+                    <h3 class="text-xl font-bold mb-3 text-brand-dark">2. Leverage Community</h3>\
+                    <p class="text-gray-600 text-sm leading-relaxed">\
+                        Achieving breakthroughs alone is hard. Join a network of corporate leaders and high-performers sharing what's working *right now*.\
+                    </p>\
+                </div>\
+\
+                <div class="p-8 rounded-3xl bg-brand-bg border border-brand-accent hover:border-brand-primary transition-colors">\
+                    <div class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center mb-6">\
+                        <i class="fa-solid fa-rocket text-brand-primary text-xl"></i>\
+                    </div>\
+                    <h3 class="text-xl font-bold mb-3 text-brand-dark">3. High-Agency Output</h3>\
+                    <p class="text-gray-600 text-sm leading-relaxed">\
+                        Shift from a passive consumer to an active architect. Use AI to reclaim your time, energy, and creative breakthroughs.\
+                    </p>\
+                </div>\
+            </div>\
+        </div>\
+    </section>\
+\
+    <!-- RESEARCH VISUALIZATION -->\
+    <section class="py-24 bg-brand-bg">\
+        <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-16 items-center">\
+            <div>\
+                <h2 class="text-4xl font-serif font-bold mb-6">Built on Deep Market Research</h2>\
+                <p class="text-gray-600 mb-6 text-lg">\
+                    We studied why corporate AI initiatives fail and why personal use stalls. Most systems are built for <strong>engineers</strong>. \
+                </p>\
+                <div class="space-y-6">\
+                    <div class="flex items-start">\
+                        <div class="mt-1 bg-amber-100 p-1.5 rounded-md mr-4">\
+                            <i class="fa-solid fa-check text-brand-primary"></i>\
+                        </div>\
+                        <div>\
+                            <h4 class="font-bold">The Corporate Need: Simplicity</h4>\
+                            <p class="text-sm text-gray-500">Leaders want results, not tutorials. Our playbooks are 100% focused on immediate efficiency gains.</p>\
+                        </div>\
+                    </div>\
+                    <div class="flex items-start">\
+                        <div class="mt-1 bg-amber-100 p-1.5 rounded-md mr-4">\
+                            <i class="fa-solid fa-check text-brand-primary"></i>\
+                        </div>\
+                        <div>\
+                            <h4 class="font-bold">The Personal Need: Agency</h4>\
+                            <p class="text-sm text-gray-500">Achieving personal breakthroughs requires focus. We show you how to offload the "admin of life" to AI.</p>\
+                        </div>\
+                    </div>\
+                </div>\
+            </div>\
+\
+            <div class="bg-white p-8 rounded-3xl border border-brand-accent shadow-xl">\
+                <div class="mb-6 text-center">\
+                    <h3 class="font-bold">The Agency Index</h3>\
+                    <p class="text-xs text-gray-400">Standard vs. Limitless Membership Results</p>\
+                </div>\
+                <div class="chart-container">\
+                    <canvas id="agencyChart"></canvas>\
+                </div>\
+            </div>\
+        </div>\
+    </section>\
+\
+    <!-- WHAT THEY GET -->\
+    <section class="py-24 bg-white">\
+        <div class="max-w-4xl mx-auto px-4 text-center">\
+            <h2 class="text-4xl font-serif font-bold mb-12">Everything You Need for a Breakthrough</h2>\
+            \
+            <div class="grid sm:grid-cols-2 gap-6 text-left">\
+                <div class="p-6 bg-brand-bg rounded-2xl border border-brand-accent">\
+                    <h4 class="font-bold mb-2 flex items-center">\
+                        <i class="fa-solid fa-book-open text-brand-primary mr-3"></i> The AI Playbooks\
+                    </h4>\
+                    <p class="text-sm text-gray-600">Step-by-step guides for corporate workflows and personal automation.</p>\
+                </div>\
+                <div class="p-6 bg-brand-bg rounded-2xl border border-brand-accent">\
+                    <h4 class="font-bold mb-2 flex items-center">\
+                        <i class="fa-solid fa-comments text-brand-primary mr-3"></i> Member Community\
+                    </h4>\
+                    <p class="text-sm text-gray-600">Access to a high-signal network of AI-forward professionals.</p>\
+                </div>\
+                <div class="p-6 bg-brand-bg rounded-2xl border border-brand-accent">\
+                    <h4 class="font-bold mb-2 flex items-center">\
+                        <i class="fa-solid fa-video text-brand-primary mr-3"></i> Weekly Strategy Calls\
+                    </h4>\
+                    <p class="text-sm text-gray-600">Direct access to experts who simplify the latest AI breakthroughs for you.</p>\
+                </div>\
+                <div class="p-6 bg-brand-bg rounded-2xl border border-brand-accent">\
+                    <h4 class="font-bold mb-2 flex items-center">\
+                        <i class="fa-solid fa-vault text-brand-primary mr-3"></i> Prompt & Tool Vault\
+                    </h4>\
+                    <p class="text-sm text-gray-600">A curated, verified library of tools that actually work. No fluff.</p>\
+                </div>\
+            </div>\
+        </div>\
+    </section>\
+\
+    <!-- FINAL CTA / SIGNUP -->\
+    <section id="signup" class="py-24 bg-brand-dark text-white">\
+        <div class="max-w-3xl mx-auto px-4 text-center">\
+            <h2 class="text-4xl md:text-5xl font-serif font-bold mb-6">Stop Reacting. <br><span class="text-brand-primary">Start Leading.</span></h2>\
+            <p class="text-xl text-stone-400 mb-12">\
+                Join thousands of high-agency individuals making their lives simpler and better with AI.\
+            </p>\
+            \
+            <div class="bg-white p-2 rounded-2xl flex flex-col sm:flex-row shadow-2xl">\
+                <input type="email" placeholder="Enter your best email..." class="flex-grow p-4 text-brand-dark rounded-xl focus:outline-none placeholder:text-gray-400">\
+                <button class="bg-brand-primary hover:bg-amber-700 text-white font-extrabold py-4 px-10 rounded-xl text-lg transition-all">\
+                    Start for Free\
+                </button>\
+            </div>\
+            <p class="mt-6 text-sm text-stone-500">\
+                <i class="fa-solid fa-shield-halved mr-2"></i> Join 12,000+ members already inside.\
+            </p>\
+        </div>\
+    </section>\
+\
+    <footer class="bg-brand-bg py-12 border-t border-brand-accent text-center">\
+        <div class="max-w-6xl mx-auto px-4 flex flex-col items-center">\
+            <div class="text-2xl font-serif font-bold mb-6">islimitless<span class="text-brand-primary">.com</span></div>\
+            <div class="flex space-x-8 text-sm text-gray-500 mb-8">\
+                <a href="#" class="hover:text-brand-primary">About</a>\
+                <a href="#" class="hover:text-brand-primary">Manifesto</a>\
+                <a href="#" class="hover:text-brand-primary">Research</a>\
+                <a href="#" class="hover:text-brand-primary">Contact</a>\
+            </div>\
+            <p class="text-xs text-gray-400 tracking-widest uppercase">&copy; 2026 islimitless. All for the sake of Agency.</p>\
+        </div>\
+    </footer>\
+\
+    <script>\
+        function scrollToSection(id) \{\
+            document.getElementById(id).scrollIntoView(\{ behavior: 'smooth' \});\
+        \}\
+\
+        const slider = document.getElementById('shiftSlider');\
+        const sliderText = document.getElementById('sliderText');\
+        const sliderStat = document.getElementById('sliderStat');\
+        const sliderCard = document.getElementById('sliderCard');\
+\
+        const states = [\
+            \{ text: "\\"I have 50 AI tabs open and I feel more behind every single day.\\"", agency: "Low", bg: "bg-brand-bg" \},\
+            \{ text: "\\"I'm trying to use AI at work, but it feels like extra work on top of my real job.\\"", agency: "Developing", bg: "bg-orange-50" \},\
+            \{ text: "\\"I've automated the busy work. Now I have the space to think bigger.\\"", agency: "High", bg: "bg-amber-50" \},\
+            \{ text: "\\"AI is my thought partner. My agency is high. My life is simple and better.\\"", agency: "Limitless", bg: "bg-white" \}\
+        ];\
+\
+        slider.addEventListener('input', (e) => \{\
+            const val = e.target.value;\
+            let idx = Math.min(Math.floor(val / 25), 3);\
+            sliderText.textContent = states[idx].text;\
+            sliderStat.textContent = "Agency: " + states[idx].agency;\
+            sliderCard.className = `p-6 rounded-2xl border border-brand-accent transition-all duration-300 $\{states[idx].bg\}`;\
+        \});\
+\
+        const ctxAgency = document.getElementById('agencyChart').getContext('2d');\
+        new Chart(ctxAgency, \{\
+            type: 'radar',\
+            data: \{\
+                labels: ['Execution Speed', 'Personal Clarity', 'Strategy', 'Mental Space', 'Tech Confidence'],\
+                datasets: [\{\
+                    label: 'islimitless Member',\
+                    data: [95, 90, 92, 88, 98],\
+                    fill: true,\
+                    backgroundColor: 'rgba(217, 119, 6, 0.2)',\
+                    borderColor: '#D97706',\
+                    pointBackgroundColor: '#D97706',\
+                    borderWidth: 3\
+                \}, \{\
+                    label: 'Standard User',\
+                    data: [35, 40, 30, 20, 45],\
+                    fill: true,\
+                    backgroundColor: 'rgba(120, 113, 108, 0.1)',\
+                    borderColor: '#78716C',\
+                    borderWidth: 2,\
+                    borderDash: [5, 5]\
+                \}]\
+            \},\
+            options: \{\
+                responsive: true,\
+                maintainAspectRatio: false,\
+                scales: \{\
+                    r: \{\
+                        angleLines: \{ display: false \},\
+                        suggestedMin: 0,\
+                        suggestedMax: 100,\
+                        ticks: \{ display: false \}\
+                    \}\
+                \},\
+                plugins: \{\
+                    legend: \{ position: 'bottom', labels: \{ font: \{ family: 'Inter', weight: 'bold' \} \} \}\
+                \}\
+            \}\
+        \});\
+    </script>\
+</body>\
+</html>}
