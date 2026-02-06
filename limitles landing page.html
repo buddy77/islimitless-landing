@@ -1,0 +1,367 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+  <title></title>
+  <meta name="Generator" content="Cocoa HTML Writer">
+  <meta name="CocoaVersion" content="2685.3">
+  <style type="text/css">
+    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
+    p.p2 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica; min-height: 14.0px}
+  </style>
+</head>
+<body>
+<p class="p1">&lt;!DOCTYPE html&gt;</p>
+<p class="p1">&lt;html lang="en"&gt;</p>
+<p class="p1">&lt;head&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta charset="UTF-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;title&gt;islimitless.com | The AI Agency Shift&lt;/title&gt;</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Tailwind CSS --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script src="https://cdn.tailwindcss.com"&gt;&lt;/script&gt;</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Chart.js --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script src="https://cdn.jsdelivr.net/npm/chart.js"&gt;&lt;/script&gt;</p>
+<p class="p2"><span class="Apple-converted-space">    </span></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- FontAwesome for Icons --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Fonts --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&amp;family=Playfair+Display:ital,wght@0,600;1,600&amp;display=swap" rel="stylesheet"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>tailwind.config = {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>theme: {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>extend: {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>colors: {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>brand: {</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>bg: '#FDFCFB',</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>dark: '#1C1917',</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>primary: '#D97706',</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>secondary: '#78716C',</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>accent: '#E7E5E4'</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>},</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>fontFamily: {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>sans: ['Inter', 'sans-serif'],</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>serif: ['Playfair Display', 'serif'],</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;style&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>input[type=range] { -webkit-appearance: none; background: transparent; }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>input[type=range]::-webkit-slider-thumb {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>-webkit-appearance: none;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>height: 24px; width: 24px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>border-radius: 50%; background: #D97706;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>cursor: pointer; margin-top: -10px;<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>box-shadow: 0 0 10px rgba(0,0,0,0.1);</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>input[type=range]::-webkit-slider-runnable-track {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>width: 100%; height: 4px; background: #E7E5E4; border-radius: 2px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>.chart-container {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>position: relative; width: 100%; max-width: 600px;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>margin-left: auto; margin-right: auto;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>height: 350px; max-height: 400px;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>@media (max-width: 640px) { .chart-container { height: 300px; } }</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/style&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Chosen Palette: Warm Stone &amp; High-Contrast Amber --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Application Structure Plan:<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">         </span>1. Hero: Focus on "Start for Free" and the "Simplicity" promise.</p>
+<p class="p1"><span class="Apple-converted-space">         </span>2. Social/Authority Proof: Interactive charts showing the "Agency Gap".</p>
+<p class="p1"><span class="Apple-converted-space">         </span>3. Feature Breakdown: "What's Inside" highlighting breakthroughs.</p>
+<p class="p1"><span class="Apple-converted-space">         </span>4. Final CTA: High-urgency "Get Started for Free" without CC disclaimer.</p>
+<p class="p1"><span class="Apple-converted-space">         </span>5. Updated Footer: 2026 Copyright.</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Visualization &amp; Content Choices:</p>
+<p class="p1"><span class="Apple-converted-space">         </span>- Interaction: Transformation Slider (Psychological hook).</p>
+<p class="p1"><span class="Apple-converted-space">         </span>- Data: Complexity Bar Chart (Pain point validation).</p>
+<p class="p1"><span class="Apple-converted-space">         </span>- Strategy: Radar Chart (The High Agency Persona).</p>
+<p class="p1"><span class="Apple-converted-space">         </span>CONFIRMATION: NO SVG/MERMAID.</p>
+<p class="p1"><span class="Apple-converted-space">    </span>--&gt;</p>
+<p class="p1">&lt;/head&gt;</p>
+<p class="p1">&lt;body class="bg-brand-bg text-brand-dark font-sans antialiased"&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- Navigation --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;nav class="w-full bg-white/80 backdrop-blur-md border-b border-brand-accent py-4 sticky top-0 z-50"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="max-w-6xl mx-auto px-4 flex justify-between items-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="text-2xl font-serif font-bold tracking-tight"&gt;islimitless&lt;span class="text-brand-primary"&gt;.com&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button onclick="scrollToSection('signup')" class="bg-brand-primary hover:bg-amber-700 text-white font-bold py-2.5 px-6 rounded-full transition-all shadow-md active:scale-95"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>Start for Free</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/nav&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- HERO SECTION --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section class="max-w-4xl mx-auto px-4 pt-20 pb-16 text-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="inline-flex items-center space-x-2 bg-amber-50 border border-amber-100 text-brand-primary font-bold px-4 py-1.5 rounded-full text-xs mb-8 uppercase tracking-widest"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span class="relative flex h-2 w-2"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-primary opacity-75"&gt;&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">              </span>&lt;span class="relative inline-flex rounded-full h-2 w-2 bg-brand-primary"&gt;&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;span&gt;Now Open: The AI Agency Membership&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><span class="Apple-converted-space">        </span></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;h1 class="text-5xl md:text-7xl font-serif font-bold leading-tight mb-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>Finally, Make AI &lt;span class="italic text-brand-primary"&gt;Simple.&lt;/span&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/h1&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;p class="text-xl text-gray-600 mb-10 max-w-2xl mx-auto leading-relaxed"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>The world's first high-agency community for corporate leaders and creators using AI to achieve personal breakthroughs without the complexity.</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/p&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-4 mb-16"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button onclick="scrollToSection('signup')" class="w-full sm:w-auto bg-brand-primary hover:bg-amber-700 text-white font-extrabold py-5 px-10 rounded-2xl text-xl shadow-xl transition-all hover:-translate-y-1"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>Get Started for Free &lt;i class="fa-solid fa-arrow-right ml-2 text-sm"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;button onclick="scrollToSection('how')" class="w-full sm:w-auto bg-white border border-brand-accent text-brand-secondary font-bold py-5 px-10 rounded-2xl text-xl hover:bg-gray-50 transition-all"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>Learn How It Works</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;!-- Interactive Slider --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="bg-white p-8 rounded-3xl shadow-2xl shadow-stone-200/50 max-w-2xl mx-auto border border-brand-accent"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="flex justify-between items-end mb-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="text-left"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="font-bold text-lg"&gt;The Simplify Shift&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-sm text-gray-500"&gt;Slide to see the transformation&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div id="sliderStat" class="text-brand-primary font-black text-xs uppercase bg-amber-50 px-3 py-1 rounded"&gt;Agency: Low&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;input type="range" min="0" max="100" value="0" class="w-full h-2 bg-gray-200 rounded-lg appearance-none cursor-pointer mb-8" id="shiftSlider"&gt;</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="p-6 bg-brand-bg rounded-2xl border border-brand-accent transition-all duration-500" id="sliderCard"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p id="sliderText" class="text-xl font-medium text-gray-700 leading-relaxed italic"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>"I have 50 AI tabs open and I feel more behind every single day."</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- THE "HOW" SECTION --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="how" class="py-24 bg-white border-y border-brand-accent"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="max-w-6xl mx-auto px-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="text-center mb-16"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h2 class="text-4xl font-serif font-bold mb-4"&gt;A Proven Conversion Plan&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p class="text-gray-500"&gt;We bridge the gap between "Cool Tech" and "Real Agency".&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="grid md:grid-cols-3 gap-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="p-8 rounded-3xl bg-brand-bg border border-brand-accent hover:border-brand-primary transition-colors"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center mb-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;i class="fa-solid fa-wand-magic-sparkles text-brand-primary text-xl"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-xl font-bold mb-3 text-brand-dark"&gt;1. Simplify the Tooling&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-gray-600 text-sm leading-relaxed"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>90% of AI tools are noise. We research the top 1% and give you the simple, "no-code" ways to implement them into your current workflow.</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="p-8 rounded-3xl bg-brand-bg border border-brand-accent hover:border-brand-primary transition-colors"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center mb-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;i class="fa-solid fa-users-rays text-brand-primary text-xl"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-xl font-bold mb-3 text-brand-dark"&gt;2. Leverage Community&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-gray-600 text-sm leading-relaxed"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>Achieving breakthroughs alone is hard. Join a network of corporate leaders and high-performers sharing what's working *right now*.</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="p-8 rounded-3xl bg-brand-bg border border-brand-accent hover:border-brand-primary transition-colors"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="w-12 h-12 bg-white rounded-xl shadow-sm flex items-center justify-center mb-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;i class="fa-solid fa-rocket text-brand-primary text-xl"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="text-xl font-bold mb-3 text-brand-dark"&gt;3. High-Agency Output&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-gray-600 text-sm leading-relaxed"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>Shift from a passive consumer to an active architect. Use AI to reclaim your time, energy, and creative breakthroughs.</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- RESEARCH VISUALIZATION --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section class="py-24 bg-brand-bg"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="max-w-6xl mx-auto px-4 grid md:grid-cols-2 gap-16 items-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;h2 class="text-4xl font-serif font-bold mb-6"&gt;Built on Deep Market Research&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;p class="text-gray-600 mb-6 text-lg"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>We studied why corporate AI initiatives fail and why personal use stalls. Most systems are built for &lt;strong&gt;engineers&lt;/strong&gt;.<span class="Apple-converted-space"> </span></p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="space-y-6"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="flex items-start"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="mt-1 bg-amber-100 p-1.5 rounded-md mr-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;i class="fa-solid fa-check text-brand-primary"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;h4 class="font-bold"&gt;The Corporate Need: Simplicity&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;p class="text-sm text-gray-500"&gt;Leaders want results, not tutorials. Our playbooks are 100% focused on immediate efficiency gains.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;div class="flex items-start"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div class="mt-1 bg-amber-100 p-1.5 rounded-md mr-4"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;i class="fa-solid fa-check text-brand-primary"&gt;&lt;/i&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;h4 class="font-bold"&gt;The Personal Need: Agency&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                            </span>&lt;p class="text-sm text-gray-500"&gt;Achieving personal breakthroughs requires focus. We show you how to offload the "admin of life" to AI.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="bg-white p-8 rounded-3xl border border-brand-accent shadow-xl"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="mb-6 text-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h3 class="font-bold"&gt;The Agency Index&lt;/h3&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-xs text-gray-400"&gt;Standard vs. Limitless Membership Results&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="chart-container"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;canvas id="agencyChart"&gt;&lt;/canvas&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- WHAT THEY GET --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section class="py-24 bg-white"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="max-w-4xl mx-auto px-4 text-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2 class="text-4xl font-serif font-bold mb-12"&gt;Everything You Need for a Breakthrough&lt;/h2&gt;</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="grid sm:grid-cols-2 gap-6 text-left"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="p-6 bg-brand-bg rounded-2xl border border-brand-accent"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h4 class="font-bold mb-2 flex items-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;i class="fa-solid fa-book-open text-brand-primary mr-3"&gt;&lt;/i&gt; The AI Playbooks</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-sm text-gray-600"&gt;Step-by-step guides for corporate workflows and personal automation.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="p-6 bg-brand-bg rounded-2xl border border-brand-accent"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h4 class="font-bold mb-2 flex items-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;i class="fa-solid fa-comments text-brand-primary mr-3"&gt;&lt;/i&gt; Member Community</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-sm text-gray-600"&gt;Access to a high-signal network of AI-forward professionals.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="p-6 bg-brand-bg rounded-2xl border border-brand-accent"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h4 class="font-bold mb-2 flex items-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;i class="fa-solid fa-video text-brand-primary mr-3"&gt;&lt;/i&gt; Weekly Strategy Calls</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-sm text-gray-600"&gt;Direct access to experts who simplify the latest AI breakthroughs for you.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;div class="p-6 bg-brand-bg rounded-2xl border border-brand-accent"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;h4 class="font-bold mb-2 flex items-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>&lt;i class="fa-solid fa-vault text-brand-primary mr-3"&gt;&lt;/i&gt; Prompt &amp; Tool Vault</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;/h4&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>&lt;p class="text-sm text-gray-600"&gt;A curated, verified library of tools that actually work. No fluff.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;!-- FINAL CTA / SIGNUP --&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;section id="signup" class="py-24 bg-brand-dark text-white"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="max-w-3xl mx-auto px-4 text-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;h2 class="text-4xl md:text-5xl font-serif font-bold mb-6"&gt;Stop Reacting. &lt;br&gt;&lt;span class="text-brand-primary"&gt;Start Leading.&lt;/span&gt;&lt;/h2&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="text-xl text-stone-400 mb-12"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>Join thousands of high-agency individuals making their lives simpler and better with AI.</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/p&gt;</p>
+<p class="p2"><span class="Apple-converted-space">            </span></p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="bg-white p-2 rounded-2xl flex flex-col sm:flex-row shadow-2xl"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;input type="email" placeholder="Enter your best email..." class="flex-grow p-4 text-brand-dark rounded-xl focus:outline-none placeholder:text-gray-400"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;button class="bg-brand-primary hover:bg-amber-700 text-white font-extrabold py-4 px-10 rounded-xl text-lg transition-all"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>Start for Free</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;/button&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="mt-6 text-sm text-stone-500"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;i class="fa-solid fa-shield-halved mr-2"&gt;&lt;/i&gt; Join 12,000+ members already inside.</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/section&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;footer class="bg-brand-bg py-12 border-t border-brand-accent text-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;div class="max-w-6xl mx-auto px-4 flex flex-col items-center"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="text-2xl font-serif font-bold mb-6"&gt;islimitless&lt;span class="text-brand-primary"&gt;.com&lt;/span&gt;&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;div class="flex space-x-8 text-sm text-gray-500 mb-8"&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;a href="#" class="hover:text-brand-primary"&gt;About&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;a href="#" class="hover:text-brand-primary"&gt;Manifesto&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;a href="#" class="hover:text-brand-primary"&gt;Research&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">                </span>&lt;a href="#" class="hover:text-brand-primary"&gt;Contact&lt;/a&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>&lt;p class="text-xs text-gray-400 tracking-widest uppercase"&gt;&amp;copy; 2026 islimitless. All for the sake of Agency.&lt;/p&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>&lt;/div&gt;</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/footer&gt;</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;script&gt;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>function scrollToSection(id) {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>document.getElementById(id).scrollIntoView({ behavior: 'smooth' });</p>
+<p class="p1"><span class="Apple-converted-space">        </span>}</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>const slider = document.getElementById('shiftSlider');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const sliderText = document.getElementById('sliderText');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const sliderStat = document.getElementById('sliderStat');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>const sliderCard = document.getElementById('sliderCard');</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>const states = [</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ text: "\"I have 50 AI tabs open and I feel more behind every single day.\"", agency: "Low", bg: "bg-brand-bg" },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ text: "\"I'm trying to use AI at work, but it feels like extra work on top of my real job.\"", agency: "Developing", bg: "bg-orange-50" },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ text: "\"I've automated the busy work. Now I have the space to think bigger.\"", agency: "High", bg: "bg-amber-50" },</p>
+<p class="p1"><span class="Apple-converted-space">            </span>{ text: "\"AI is my thought partner. My agency is high. My life is simple and better.\"", agency: "Limitless", bg: "bg-white" }</p>
+<p class="p1"><span class="Apple-converted-space">        </span>];</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>slider.addEventListener('input', (e) =&gt; {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>const val = e.target.value;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>let idx = Math.min(Math.floor(val / 25), 3);</p>
+<p class="p1"><span class="Apple-converted-space">            </span>sliderText.textContent = states[idx].text;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>sliderStat.textContent = "Agency: " + states[idx].agency;</p>
+<p class="p1"><span class="Apple-converted-space">            </span>sliderCard.className = `p-6 rounded-2xl border border-brand-accent transition-all duration-300 ${states[idx].bg}`;</p>
+<p class="p1"><span class="Apple-converted-space">        </span>});</p>
+<p class="p2"><br></p>
+<p class="p1"><span class="Apple-converted-space">        </span>const ctxAgency = document.getElementById('agencyChart').getContext('2d');</p>
+<p class="p1"><span class="Apple-converted-space">        </span>new Chart(ctxAgency, {</p>
+<p class="p1"><span class="Apple-converted-space">            </span>type: 'radar',</p>
+<p class="p1"><span class="Apple-converted-space">            </span>data: {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>labels: ['Execution Speed', 'Personal Clarity', 'Strategy', 'Mental Space', 'Tech Confidence'],</p>
+<p class="p1"><span class="Apple-converted-space">                </span>datasets: [{</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>label: 'islimitless Member',</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>data: [95, 90, 92, 88, 98],</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>fill: true,</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>backgroundColor: 'rgba(217, 119, 6, 0.2)',</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>borderColor: '#D97706',</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>pointBackgroundColor: '#D97706',</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>borderWidth: 3</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}, {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>label: 'Standard User',</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>data: [35, 40, 30, 20, 45],</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>fill: true,</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>backgroundColor: 'rgba(120, 113, 108, 0.1)',</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>borderColor: '#78716C',</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>borderWidth: 2,</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>borderDash: [5, 5]</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}]</p>
+<p class="p1"><span class="Apple-converted-space">            </span>},</p>
+<p class="p1"><span class="Apple-converted-space">            </span>options: {</p>
+<p class="p1"><span class="Apple-converted-space">                </span>responsive: true,</p>
+<p class="p1"><span class="Apple-converted-space">                </span>maintainAspectRatio: false,</p>
+<p class="p1"><span class="Apple-converted-space">                </span>scales: {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>r: {</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>angleLines: { display: false },</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>suggestedMin: 0,</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>suggestedMax: 100,</p>
+<p class="p1"><span class="Apple-converted-space">                        </span>ticks: { display: false }</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>}</p>
+<p class="p1"><span class="Apple-converted-space">                </span>},</p>
+<p class="p1"><span class="Apple-converted-space">                </span>plugins: {</p>
+<p class="p1"><span class="Apple-converted-space">                    </span>legend: { position: 'bottom', labels: { font: { family: 'Inter', weight: 'bold' } } }</p>
+<p class="p1"><span class="Apple-converted-space">                </span>}</p>
+<p class="p1"><span class="Apple-converted-space">            </span>}</p>
+<p class="p1"><span class="Apple-converted-space">        </span>});</p>
+<p class="p1"><span class="Apple-converted-space">    </span>&lt;/script&gt;</p>
+<p class="p1">&lt;/body&gt;</p>
+<p class="p1">&lt;/html&gt;</p>
+</body>
+</html>
